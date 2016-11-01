@@ -1,11 +1,11 @@
-// TXP 4.6 tag registration
+n// TXP 4.6 tag registration
 if (class_exists('\Textpattern\Tag\Registry')) {
 Txp::get('\Textpattern\Tag\Registry')
-->register('mkp_if_ia')
+->register('mkp_if_en')
 ;
 }
 
-function mkp_if_ia($atts, $thing='')
+function mkp_if_en($atts, $thing='')
 {
 
 	global $variable;
@@ -16,5 +16,5 @@ function mkp_if_ia($atts, $thing='')
 
 	// if the url ends in 'ia' this will return true; otherwise false
 	 
-	return (end($parts) == 'ia') ? parse(EvalElse($thing, true)) : parse(EvalElse($thing, false));
+	return (end($parts) == 'en') ? parse(EvalElse($thing, true)) : parse(EvalElse($thing, false));
 }
