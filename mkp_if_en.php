@@ -14,7 +14,8 @@ function mkp_if_en($atts, $thing='')
 
 	$parts = explode('/', preg_replace("|^https?://[^/]+|i", "", serverSet('REQUEST_URI')), 5);
 
-	// if the url ends in 'ia' this will return true; otherwise false
+	// if the url begins with 'en' this will return true; otherwise false
 	 
-	return (end($parts) == 'en') ? parse(EvalElse($thing, true)) : parse(EvalElse($thing, false));
+	return ($parts[1]) == 'en') ? parse(EvalElse($thing, true)) : parse(EvalElse($thing, false));
 }
+
