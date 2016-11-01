@@ -16,6 +16,6 @@ function mkp_if_en($atts, $thing='')
 
 	// if the url begins with 'en' this will return true; otherwise false
 	 
-	return ($parts[1]) == 'en') ? parse(EvalElse($thing, true)) : parse(EvalElse($thing, false));
+	return ($parts[1] == 'en') ? parse(EvalElse($thing, true)) : parse(EvalElse($thing, false));
 }
 
