@@ -4,11 +4,10 @@ This conditional tag examines the url of the current page and determines if the 
 
 h2. Links
 
-* "Github Code Repository":https://github.com/michaelkpate/mkp_if_amp
-* "Download":https://raw.githubusercontent.com/michaelkpate/mkp_if_amp/master/mkp_if_amp.txt
-* "Demo Site":http://ampdemo.cmsstyles.com/
+* "Github Code Repository":https://github.com/michaelkpate/mkp_if_en
+* "Download":https://raw.githubusercontent.com/michaelkpate/mkp_if_amp/master/mkp_if_en.txt
 
-h2. mkp_if_amp
+h2. mkp_if_en
 
 h3. Attributes
 
@@ -16,21 +15,14 @@ h4. None
 
 h3. Examples
 
-You will want some code similar to this in your individual article template header so that the amp page can be properly detected.
-
-bc. <txp:if_individual_article>
- <link rel="canonical" href="<txp:permlink />">
- <link rel="amphtml" href="<txp:permlink />/amp/">
-</txp:if_individual_article>
-
 You will want something similar to this in your individual article template to display the alternative formatting.
 
-bc. <txp:mkp_if_amp>
- <txp:output_form form="layout_archives_amp" />
+bc. <txp:mkp_if_en>
+ <txp:output_form form="layout_archives_english" />
 <txp:else />
  <txp:output_form form="layout_archives_standard" />
-</txp:_mkp_if_amp>
+</txp:_mkp_if_en>
 
 h3. Release History
 
-Version 1.0: March 24th, 2016
+Version 1.0: November 1st, 2016
