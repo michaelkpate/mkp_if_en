@@ -1,4 +1,4 @@
-n// TXP 4.6 tag registration
+// TXP 4.6 tag registration
 if (class_exists('\Textpattern\Tag\Registry')) {
 Txp::get('\Textpattern\Tag\Registry')
 ->register('mkp_if_en')
