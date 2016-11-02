@@ -5,7 +5,7 @@ This conditional tag examines the url of the current page and determines if the 
 h2. Links
 
 * "Github Code Repository":https://github.com/michaelkpate/mkp_if_en
-* "Download":https://raw.githubusercontent.com/michaelkpate/mkp_if_en/master/mkp_if_en.txt
+* "Download":https://raw.githubusercontent.com/michaelkpate/mkp_if_amp/master/mkp_if_en.txt
 
 h2. mkp_if_en
 
@@ -15,14 +15,23 @@ h4. None
 
 h3. Examples
 
-You will want something similar to this in your individual article template to display the alternative formatting.
+You will want something similar to this in your error template to display the alternative formatting.
 
-bc. <txp:mkp_if_en>
- <txp:output_form form="layout_archives_english" />
+bc.
+<txp:mkp_if_en>
+  <txp:smd_if field="txpvar:target_article" operator="isused">
+    [individual article page header design]
+    <txp:article_custom form="[article form]" id='<txp:variable name="target_article" />' />
+    [individual article page footer design]
+  <txp:else />
+    [section page header design]
+    <txp:article_custom form="[article form]" section='<txp:variable name="target_section" />' />
+    [section footer design]
 <txp:else />
- <txp:output_form form="layout_archives_standard" />
+ [standard error page code]
 </txp:_mkp_if_en>
 
 h3. Release History
 
+Version 1.1: November 2nd, 2016 (added the variables)
 Version 1.0: November 1st, 2016
