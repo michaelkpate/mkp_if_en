@@ -15,7 +15,23 @@ function mkp_if_en($atts, $thing='')
 	$parts = explode('/', preg_replace("|^https?://[^/]+|i", "", serverSet('REQUEST_URI')), 5);
 
 	// if the url begins with 'en' this will return true; otherwise false
-	 
-	return ($parts[1] == 'en') ? parse(EvalElse($thing, true)) : parse(EvalElse($thing, false));
+
+	if ($parts[1] == 'en') {
+
+		// the variable target_section will return the section specified in the url
+
+		if (isset($parts[2])) { $variable['target_section'] = $parts[2] : null; }
+
+		// the variable target_article will return the article id specified in the url
+
+		if (isset($parts[3])) { $variable['target_article'] = (is_numeric($parts[3])) ? $parts[3] : null; }
+
+		return parse(EvalElse($thing, true));
+
+} else {
+
+		return parse(EvalElse($thing, false));
 }
 
+
+}
