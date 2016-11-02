@@ -20,7 +20,7 @@ function mkp_if_en($atts, $thing='')
 
 		// the variable target_section will return the section specified in the url
 
-		if (isset($parts[2])) { $variable['target_section'] = $parts[2] : null; }
+		if (isset($parts[2])) { $variable['target_section'] = $parts[2]; }
 
 		// the variable target_article will return the article id specified in the url
 
