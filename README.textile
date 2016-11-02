@@ -17,8 +17,7 @@ h3. Examples
 
 You will want something similar to this in your error template to display the alternative formatting.
 
-bc.
-<txp:mkp_if_en>
+bc. <txp:mkp_if_en>
   <txp:smd_if field="txpvar:target_article" operator="isused">
     [individual article page header design]
     <txp:article_custom form="[article form]" id='<txp:variable name="target_article" />' />
